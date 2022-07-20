@@ -2,8 +2,18 @@
        #include <stdlib.h>
        #include <string.h>
 
-       int
-       main(int argc, char *argv[])
+/*     $ ./a.out 'a/bbb///cc;xxx:yyy:' ':;' '/'
+       1: a/bbb///cc
+                    --> a
+                    --> bbb
+                    --> cc
+           2: xxx
+                    --> xxx
+           3: yyy
+                    --> yyy
+*/
+
+       int main(int argc, char *argv[])
        {
            char *str1, *str2, *token, *subtoken;
            char *saveptr1, *saveptr2;
